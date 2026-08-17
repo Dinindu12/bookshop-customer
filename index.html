@@ -52,12 +52,12 @@
     .navbar {
       background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
       color: white;
-      padding: 16px 24px;
+      padding: 12px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 10px;
       position: sticky;
       top: 0;
       z-index: 100;
@@ -66,22 +66,22 @@
     .navbar .brand {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
     }
     .navbar .brand h2 {
-      font-size: 22px;
+      font-size: 20px;
       font-weight: 700;
     }
     .navbar .brand span {
-      font-size: 28px;
+      font-size: 24px;
     }
     .navbar .search-box {
-      padding: 10px 20px;
+      padding: 8px 16px;
       border-radius: 30px;
       border: none;
-      width: 280px;
+      width: 220px;
       max-width: 100%;
-      font-size: 14px;
+      font-size: 13px;
       background: rgba(255, 255, 255, 0.15);
       color: white;
       backdrop-filter: blur(10px);
@@ -99,13 +99,13 @@
     .navbar .cart-badge {
       background: #e74c3c;
       color: white;
-      padding: 8px 16px;
+      padding: 6px 14px;
       border-radius: 30px;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 600;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
       cursor: pointer;
       transition: 0.3s;
       border: none;
@@ -118,24 +118,24 @@
     /* ===== Categories Bar ===== */
     .categories-bar {
       background: white;
-      padding: 12px 24px;
+      padding: 10px 20px;
       display: flex;
-      gap: 10px;
+      gap: 8px;
       flex-wrap: wrap;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
       position: sticky;
-      top: 72px;
+      top: 64px;
       z-index: 99;
       align-items: center;
-      min-height: 56px;
+      min-height: 48px;
     }
     .categories-bar button {
-      padding: 8px 20px;
+      padding: 6px 16px;
       border: 2px solid #e0e0e0;
       border-radius: 30px;
       background: white;
       cursor: pointer;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 500;
       transition: 0.3s;
       color: #555;
@@ -155,8 +155,8 @@
     /* ===== Main Container ===== */
     .container {
       display: flex;
-      gap: 20px;
-      padding: 20px;
+      gap: 16px;
+      padding: 16px;
       max-width: 1400px;
       margin: auto;
       flex-wrap: wrap;
@@ -166,16 +166,16 @@
     .products {
       flex: 2.5;
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 14px;
     }
 
-    /* ===== Product Card - FIXED HEIGHT ===== */
+    /* ===== Product Card - SMALLER SIZE ===== */
     .card {
       background: white;
-      border-radius: 16px;
-      padding: 20px 16px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+      border-radius: 12px;
+      padding: 12px 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
       text-align: center;
       transition: 0.3s;
       position: relative;
@@ -183,32 +183,32 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      min-height: 280px;
-      max-height: 320px;
+      min-height: 200px;
+      max-height: 230px;
     }
     .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
     }
     .card .icon {
-      font-size: 40px;
-      margin-bottom: 4px;
+      font-size: 28px;
+      margin-bottom: 2px;
     }
     .card .category-tag {
       position: absolute;
-      top: 12px;
-      right: 12px;
+      top: 8px;
+      right: 8px;
       background: #3498db;
       color: white;
-      font-size: 9px;
-      padding: 3px 10px;
+      font-size: 8px;
+      padding: 2px 8px;
       border-radius: 20px;
       font-weight: 600;
       text-transform: capitalize;
     }
     .card h3 {
-      margin: 4px 0 2px;
-      font-size: 15px;
+      margin: 2px 0;
+      font-size: 13px;
       font-weight: 600;
       color: #2c3e50;
       white-space: nowrap;
@@ -216,7 +216,7 @@
       text-overflow: ellipsis;
     }
     .card .author {
-      font-size: 12px;
+      font-size: 10px;
       color: #7f8c8d;
       margin-bottom: 2px;
       white-space: nowrap;
@@ -226,11 +226,11 @@
     .card .price {
       color: #27ae60;
       font-weight: 700;
-      font-size: 18px;
+      font-size: 16px;
       margin: 2px 0;
     }
     .card .stock {
-      font-size: 11px;
+      font-size: 10px;
       color: #95a5a6;
       margin: 2px 0;
     }
@@ -244,17 +244,17 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-      margin: 6px 0 8px;
+      gap: 8px;
+      margin: 4px 0 6px;
     }
     .card .qty-control button {
-      width: 30px;
-      height: 30px;
+      width: 24px;
+      height: 24px;
       border: none;
       border-radius: 50%;
       background: #3498db;
       color: white;
-      font-size: 18px;
+      font-size: 14px;
       cursor: pointer;
       transition: 0.3s;
       display: flex;
@@ -271,26 +271,26 @@
     }
     .card .qty-control span {
       font-weight: 600;
-      font-size: 16px;
-      min-width: 28px;
+      font-size: 14px;
+      min-width: 24px;
       text-align: center;
     }
     .card .add-btn {
       width: 100%;
-      padding: 8px;
+      padding: 6px;
       background: linear-gradient(135deg, #2ecc71, #27ae60);
       color: white;
       border: none;
-      border-radius: 10px;
+      border-radius: 8px;
       cursor: pointer;
       font-weight: 600;
-      font-size: 13px;
+      font-size: 11px;
       transition: 0.3s;
       margin-top: auto;
     }
     .card .add-btn:hover {
       transform: scale(1.02);
-      box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+      box-shadow: 0 4px 12px rgba(46, 204, 113, 0.3);
     }
     .card .add-btn:disabled {
       background: #bdc3c7;
@@ -311,20 +311,20 @@
       flex: 1.2;
       background: white;
       border-radius: 16px;
-      padding: 20px;
+      padding: 16px;
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
       max-height: 80vh;
       overflow-y: auto;
-      min-width: 300px;
+      min-width: 280px;
       position: sticky;
-      top: 160px;
+      top: 140px;
     }
     .cart-side h3 {
-      font-size: 20px;
-      margin-bottom: 16px;
+      font-size: 18px;
+      margin-bottom: 12px;
       color: #2c3e50;
       border-bottom: 2px solid #f0f0f0;
-      padding-bottom: 12px;
+      padding-bottom: 10px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -332,39 +332,39 @@
     .cart-side h3 span {
       background: #3498db;
       color: white;
-      padding: 2px 12px;
+      padding: 2px 10px;
       border-radius: 20px;
-      font-size: 14px;
+      font-size: 12px;
     }
     .cart-empty {
       color: #95a5a6;
       text-align: center;
-      padding: 40px 0;
-      font-size: 15px;
+      padding: 30px 0;
+      font-size: 14px;
       line-height: 1.8;
     }
     .cart-empty .empty-icon {
-      font-size: 48px;
+      font-size: 40px;
       display: block;
-      margin-bottom: 12px;
+      margin-bottom: 8px;
     }
 
     .cart-item {
       display: flex;
       align-items: center;
-      padding: 12px 0;
+      padding: 10px 0;
       border-bottom: 1px solid #f0f0f0;
-      gap: 10px;
+      gap: 8px;
     }
     .cart-item .item-name {
       flex: 1;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 500;
     }
     .cart-item .item-price {
-      font-size: 13px;
+      font-size: 12px;
       color: #7f8c8d;
-      min-width: 60px;
+      min-width: 50px;
     }
     .cart-item .qty-controls {
       display: flex;
@@ -372,11 +372,11 @@
       gap: 4px;
     }
     .cart-item .qty-controls button {
-      width: 28px;
-      height: 28px;
+      width: 24px;
+      height: 24px;
       border: none;
       border-radius: 50%;
-      font-size: 16px;
+      font-size: 14px;
       font-weight: bold;
       cursor: pointer;
       display: flex;
@@ -399,23 +399,23 @@
       background: #27ae60;
     }
     .cart-item .qty-controls .qty-num {
-      min-width: 28px;
+      min-width: 24px;
       text-align: center;
       font-weight: 600;
-      font-size: 15px;
+      font-size: 14px;
     }
     .cart-item .item-total {
       font-weight: 600;
       color: #2c3e50;
-      font-size: 14px;
-      min-width: 60px;
+      font-size: 13px;
+      min-width: 50px;
       text-align: right;
     }
     .cart-item .remove-btn {
       background: transparent;
       border: none;
       color: #e74c3c;
-      font-size: 18px;
+      font-size: 16px;
       cursor: pointer;
       padding: 0 4px;
       transition: 0.3s;
@@ -426,10 +426,10 @@
     }
 
     .cart-total {
-      font-size: 22px;
+      font-size: 18px;
       font-weight: 700;
       color: #2c3e50;
-      padding: 16px 0;
+      padding: 12px 0;
       border-top: 2px solid #2c3e50;
       margin-top: 8px;
       display: flex;
@@ -439,18 +439,18 @@
     /* ===== Order Form ===== */
     .order-form {
       background: #f8f9fa;
-      border-radius: 12px;
-      padding: 16px;
-      margin-top: 12px;
+      border-radius: 10px;
+      padding: 12px;
+      margin-top: 10px;
       border: 1px solid #e0e0e0;
     }
     .order-form input {
       width: 100%;
-      padding: 12px;
-      margin: 6px 0;
+      padding: 10px;
+      margin: 4px 0;
       border: 2px solid #e0e0e0;
-      border-radius: 10px;
-      font-size: 14px;
+      border-radius: 8px;
+      font-size: 13px;
       transition: 0.3s;
       background: white;
     }
@@ -464,20 +464,20 @@
     }
     .checkout-btn {
       width: 100%;
-      padding: 16px;
+      padding: 12px;
       background: linear-gradient(135deg, #2ecc71, #27ae60);
       color: white;
       border: none;
-      border-radius: 12px;
+      border-radius: 10px;
       font-weight: 700;
-      font-size: 18px;
+      font-size: 16px;
       cursor: pointer;
       transition: 0.3s;
       margin-top: 8px;
     }
     .checkout-btn:hover {
       transform: scale(1.02);
-      box-shadow: 0 4px 20px rgba(46, 204, 113, 0.3);
+      box-shadow: 0 4px 16px rgba(46, 204, 113, 0.3);
     }
     .checkout-btn:disabled {
       background: #95a5a6;
@@ -487,15 +487,15 @@
     }
     .cancel-btn {
       width: 100%;
-      padding: 14px;
+      padding: 12px;
       background: #e74c3c;
       color: white;
       border: none;
-      border-radius: 12px;
+      border-radius: 10px;
       font-weight: 600;
-      font-size: 15px;
+      font-size: 14px;
       cursor: pointer;
-      margin-top: 8px;
+      margin-top: 6px;
       transition: 0.3s;
     }
     .cancel-btn:hover {
@@ -507,24 +507,24 @@
     .no-products {
       grid-column: 1 / -1;
       text-align: center;
-      padding: 60px 20px;
+      padding: 40px 20px;
       color: #95a5a6;
     }
     .no-products .big-icon {
-      font-size: 64px;
+      font-size: 48px;
       display: block;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
     }
 
     /* ===== Responsive ===== */
     @media (max-width: 768px) {
       .container {
         flex-direction: column;
-        padding: 12px;
+        padding: 10px;
       }
       .products {
-        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-        gap: 12px;
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 10px;
       }
       .cart-side {
         position: relative;
@@ -533,26 +533,49 @@
         min-width: unset;
       }
       .navbar {
-        padding: 12px 16px;
+        padding: 10px 12px;
       }
       .navbar .search-box {
-        width: 160px;
-        font-size: 12px;
-        padding: 8px 14px;
+        width: 140px;
+        font-size: 11px;
+        padding: 6px 12px;
       }
       .navbar .brand h2 {
-        font-size: 17px;
+        font-size: 16px;
+      }
+      .card {
+        min-height: 180px;
+        max-height: 210px;
+        padding: 10px 8px;
+      }
+      .card .icon {
+        font-size: 24px;
+      }
+      .card h3 {
+        font-size: 12px;
+      }
+      .card .price {
+        font-size: 14px;
+      }
+      .card .qty-control button {
+        width: 22px;
+        height: 22px;
+        font-size: 12px;
+      }
+      .card .add-btn {
+        font-size: 10px;
+        padding: 5px;
       }
 
       .categories-bar {
         padding: 8px 12px;
         gap: 6px;
-        top: 64px;
+        top: 58px;
         overflow-x: auto;
         flex-wrap: nowrap;
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
-        min-height: 48px;
+        min-height: 42px;
         justify-content: flex-start;
       }
       .categories-bar::-webkit-scrollbar {
@@ -560,94 +583,62 @@
       }
       .categories-bar button {
         flex: 0 0 auto;
-        padding: 6px 14px;
-        font-size: 11px;
+        padding: 5px 12px;
+        font-size: 10px;
         white-space: nowrap;
-        border-width: 2px;
-      }
-
-      .cart-item {
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
-      .cart-item .item-name {
-        flex-basis: 100%;
-        font-size: 13px;
-      }
-      .cart-total {
-        font-size: 18px;
-      }
-
-      /* Adjust card height on smaller screens */
-      .card {
-        min-height: 240px;
-        max-height: 290px;
-        padding: 14px 12px;
-      }
-      .card .icon {
-        font-size: 32px;
-      }
-      .card h3 {
-        font-size: 14px;
-      }
-      .card .price {
-        font-size: 16px;
-      }
-      .card .qty-control button {
-        width: 26px;
-        height: 26px;
-        font-size: 16px;
       }
     }
 
     @media (max-width: 480px) {
       .products {
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
         gap: 8px;
       }
       .card {
-        min-height: 210px;
-        max-height: 260px;
-        padding: 12px 10px;
+        min-height: 160px;
+        max-height: 190px;
+        padding: 8px 6px;
+        border-radius: 8px;
       }
       .card .icon {
-        font-size: 28px;
+        font-size: 20px;
       }
       .card h3 {
-        font-size: 13px;
-      }
-      .card .price {
-        font-size: 15px;
-      }
-      .card .qty-control button {
-        width: 24px;
-        height: 24px;
-        font-size: 14px;
-      }
-      .card .add-btn {
-        font-size: 12px;
-        padding: 6px;
-      }
-      .navbar .search-box {
-        width: 120px;
         font-size: 11px;
       }
+      .card .price {
+        font-size: 13px;
+      }
+      .card .qty-control button {
+        width: 20px;
+        height: 20px;
+        font-size: 10px;
+      }
+      .card .qty-control span {
+        font-size: 12px;
+        min-width: 20px;
+      }
+      .card .add-btn {
+        font-size: 9px;
+        padding: 4px;
+        border-radius: 6px;
+      }
       .cart-side {
-        padding: 12px;
+        padding: 10px;
       }
       .checkout-btn {
-        font-size: 15px;
-        padding: 14px;
+        font-size: 14px;
+        padding: 12px;
       }
       .categories-bar button {
-        font-size: 10px;
-        padding: 4px 10px;
+        font-size: 9px;
+        padding: 4px 8px;
       }
     }
 
     /* ===== Scrollbar for Cart ===== */
     .cart-side::-webkit-scrollbar {
-      width: 6px;
+      width: 4px;
     }
     .cart-side::-webkit-scrollbar-track {
       background: #f0f0f0;
@@ -686,6 +677,7 @@
     <button data-category="science">🔬 Science</button>
     <button data-category="children">🧒 Children</button>
     <button data-category="stationery">✏️ Stationery</button>
+    <button data-category="bag">🎒 Bags</button>
   </div>
 
   <!-- Main Container -->
@@ -736,6 +728,30 @@
       toast.className = 'toast' + (isError ? ' error' : '');
       toast.style.display = 'block';
       setTimeout(() => { toast.style.display = 'none'; }, 3000);
+    }
+
+    // =============================================
+    // ✅ DYNAMIC ICON BASED ON CATEGORY OR NAME
+    // =============================================
+    function getProductIcon(name, category) {
+      const cat = (category || '').toLowerCase();
+      const nameLower = (name || '').toLowerCase();
+
+      // Check category first
+      if (cat === 'stationery' || cat === 'stationary') return '✏️';
+      if (cat === 'bag' || cat === 'bags') return '🎒';
+      if (cat === 'fiction') return '📘';
+      if (cat === 'nonfiction') return '📕';
+      if (cat === 'science') return '🔬';
+      if (cat === 'children') return '📗';
+      
+      // Check name keywords
+      if (nameLower.includes('pen') || nameLower.includes('pencil') || nameLower.includes('eraser') || nameLower.includes('ruler')) return '✏️';
+      if (nameLower.includes('bag') || nameLower.includes('backpack') || nameLower.includes('sack')) return '🎒';
+      if (nameLower.includes('computer') || nameLower.includes('laptop') || nameLower.includes('tech')) return '💻';
+      
+      // Default
+      return '📖';
     }
 
     // ===== Categories =====
@@ -790,9 +806,10 @@
         const div = document.createElement('div');
         div.className = 'card' + (p.stock <= 0 ? ' out-of-stock' : '');
         const stockClass = p.stock <= 0 ? 'out' : p.stock <= 5 ? 'low' : '';
+        const icon = getProductIcon(p.name, p.category);
         div.innerHTML = `
           ${p.category ? `<span class="category-tag">${p.category}</span>` : ''}
-          <div class="icon">📖</div>
+          <div class="icon">${icon}</div>
           <h3 title="${p.name || 'Item'}">${p.name || 'Item'}</h3>
           ${p.author ? `<div class="author">${p.author}</div>` : ''}
           <div class="price">$${p.price?.toFixed(2) || '0.00'}</div>
