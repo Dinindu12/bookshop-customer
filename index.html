@@ -24,22 +24,12 @@
       display:flex; justify-content:space-between; align-items:center; 
       flex-wrap:wrap; gap:8px; position:sticky; top:0; z-index:100; 
     }
-    .navbar h2 { font-size:18px; }
     .navbar .brand { display:flex; align-items:center; gap:10px; }
+    .navbar .brand h2 { font-size:18px; }
     .navbar input { 
       padding:8px 14px; border-radius:20px; border:none; 
       width:200px; max-width:100%; font-size:14px; 
     }
-    .nav-links { display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
-    .nav-links button { 
-      border:none; padding:8px 16px; border-radius:6px; 
-      color:white; cursor:pointer; font-size:13px; font-weight:500;
-    }
-    .back-btn { 
-      background:#34495e; 
-    }
-    .back-btn:hover { background:#2c3e50; }
-    .back-btn.hidden { display:none; }
     
     /* Main Layout */
     .container { display:flex; gap:16px; padding:12px; max-width:1400px; margin:auto; flex-wrap:wrap; }
@@ -134,7 +124,7 @@
       .cart-side { position:relative; top:0; max-height:none; min-width:unset; }
       .navbar { padding:10px 12px; }
       .navbar input { width:140px; font-size:12px; }
-      .navbar h2 { font-size:16px; }
+      .navbar .brand h2 { font-size:16px; }
       .cart-item { flex-wrap:wrap; justify-content:space-between; }
       .cart-item .item-name { flex-basis:100%; font-size:13px; }
       .cart-item .item-price { font-size:12px; }
@@ -158,10 +148,6 @@
       <h2>📚 Bookshop</h2>
     </div>
     <input type="text" id="searchInput" placeholder="🔍 Search books...">
-    <div class="nav-links">
-      <!-- ✅ Back to POS Button - Hidden by default, shown only for Admin/Owner -->
-      <button class="back-btn hidden" id="backToPosBtn">⬅ Back to POS</button>
-    </div>
   </div>
 
   <div class="container">
@@ -182,10 +168,11 @@
   </div>
 
   <script type="module">
-    // Firebase Config
+    // ============================================
+    // 🔥 Firebase Config - No Auth, Only Firestore
+    // ============================================
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-    import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
-    import { getFirestore, collection, onSnapshot, addDoc, updateDoc, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+    import { getFirestore, collection, onSnapshot, addDoc, updateDoc, doc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
     const firebaseConfig = {
       apiKey: "AIzaSyAYmeSy9cSWdqXERnQL1fQsn3R5MSu6KAQ",
@@ -197,12 +184,10 @@
     };
 
     const app = initializeApp(firebaseConfig);
-    const auth = getAuth(app);
     const db = getFirestore(app);
 
     let products = [];
     let cart = [];
-    let currentUserRole = '';
     const toast = document.getElementById('toast');
 
     function showToast(message, isError = false) {
@@ -211,42 +196,6 @@
       toast.style.display = 'block';
       setTimeout(() => { toast.style.display = 'none'; }, 3000);
     }
-
-    // ============================================
-    // ✅ ROLE CHECK - Show/Hide Back to POS Button
-    // ============================================
-    onAuthStateChanged(auth, async (user) => {
-      const backBtn = document.getElementById('backToPosBtn');
-      
-      if (!user) {
-        // Not logged in - hide button
-        backBtn.classList.add('hidden');
-        return;
-      }
-
-      try {
-        const docSnap = await getDoc(doc(db, 'users', user.uid));
-        if (docSnap.exists()) {
-          const role = docSnap.data().role;
-          currentUserRole = role;
-          
-          // ✅ Show button only for Admin or Owner
-          if (role === 'admin' || role === 'owner') {
-            backBtn.classList.remove('hidden');
-            backBtn.onclick = () => {
-              window.location.href = 'https://dinindu12.github.io/bookshop-pos/';
-            };
-          } else {
-            backBtn.classList.add('hidden');
-          }
-        } else {
-          backBtn.classList.add('hidden');
-        }
-      } catch (error) {
-        console.warn('Role check error:', error);
-        backBtn.classList.add('hidden');
-      }
-    });
 
     // ============================================
     // Load Products
